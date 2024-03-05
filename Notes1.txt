@@ -1,0 +1,78 @@
+[We can handle multiple windows or tabs of browser by using 
+getWindowHandles() method
+
+
+getWindowHandle() : gets the windowid/WindowHande of current focused window
+return type is String
+
+getWindowHandles(): gets all the windowsid's/WindowHandles of the windows which are opened at that current instance, return type is set<String>
+
+List: Values are stored in index wise and duplicate values are allowed
+- always index starts with Zero.
+
+Set: duplicate values are not allowed 
+
+driver.close() : This method will close the current focused window and driver memory will not be destroyed i.e., driver will not become null
+
+driver.quit() : This method will close all the browser windows which are opend at that instance and driver object will become null
+
+
+Handling Popups/Alerts:
+--------------------------------
+Alert : Alert is an Interface used to handle alerts or popups
+
+driver.switchTo().alert().accept() //to click accept or OK button on alert
+
+driver .switchTo().alert().dismiss() // to click cncel or reject button on alert
+
+driver.switchTo().alert().getText() // to get the Text on the alert window
+
+driver.switchTo().alert().sendKeys() // to Send the text on the alert window
+
+
+Actions : Actions is  a class used to handle mouse actions or events
+
+Actions act = new Actions(driver);
+act.sendKeys("text").build().perform();
+act.click().build().perform();
+act.moveToElement(WebElement).build().perform();
+
+
+Batch or Suite Execution: Execution of two or more test cases together is called batch/suite execution.
+In TestNG we can execute batch executions by using testNG XML file (TestNGSuiteXML.file)
+
+Advantages of TestNG:
+- Execution flows based on the annotations
+- suite execution by using XML file
+- Clear Test Reports
+- we can prioritize our test executions by passing parameters priroity
+- we can enable or disable the @test methods 
+- we can groupby @test methods
+- data provider annoatation is used to provide multiple sets of data to the @Test methods
+- We can excute tests in Parallel by setting up parallel parametet is equls to true in testNG.XML file
+
+
+
+@DataProvider: is used to provide multiple sets of data to the @Test annotation methods, return type is Object Array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
